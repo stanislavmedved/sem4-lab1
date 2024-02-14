@@ -11,7 +11,7 @@ int main()
     setlocale(LC_ALL, "rus");
 
     CashRegister* cashRegister = new CashRegister();
-    DispenserType* bubblegum = new DispenserType(100, 30);
+    DispenserType* bubblegum = new DispenserType(1, 30);
     DispenserType* crisps = new DispenserType(75, 60);
     DispenserType* cookies = new DispenserType(80, 10);
     //и так далее
@@ -62,8 +62,6 @@ void sellProduct(CashRegister* cashRegister, DispenserType* dispenser)
 
     if (dispenser->getNoOfItems() == 0) {
         printf("Этот товар закончился!\n");
-        printf("Нажмите любую кнопку, чтобы продолжить.");
-        _getch();
         return;
     }
     
@@ -72,7 +70,6 @@ void sellProduct(CashRegister* cashRegister, DispenserType* dispenser)
     std::cin >> deposit;
     if (deposit < dispenser->getCost()) {
         printf("Внесённая сумма недостаточна! Отмена операции.\n");
-        _getch();
         return;
     }
 
