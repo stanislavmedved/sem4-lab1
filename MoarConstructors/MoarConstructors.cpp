@@ -35,7 +35,7 @@ int main()
         }
 
         printf("Нажмите любую кнопку, чтобы продолжить.");
-        _getch();
+        int _ = _getch();
         system("cls");
         showSelection();
         std::cin >> choice;
@@ -72,8 +72,8 @@ void sellProduct(CashRegister* cashRegister, DispenserType* dispenser)
         printf("Внесённая сумма недостаточна! Отмена операции.\n");
         return;
     }
-
-    cashRegister->acceptAmount(deposit);
+    int returns = deposit - dispenser->getCost();
+    cashRegister->acceptAmount(deposit-returns);
     dispenser->makeSale();
-    printf("Заберите свой товар в окошке выдачи. Автомат сдачу не выдаёт :)\n");
+    printf("Заберите свой товар в окошке выдачи. Ваша сдача: %i :)\n", returns);
 }

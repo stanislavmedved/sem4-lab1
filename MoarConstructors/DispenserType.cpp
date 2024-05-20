@@ -2,13 +2,13 @@
 
 DispenserType::DispenserType()
 {
-	this->cost = 50;
+	this->typeCost = 50;
 	this->numberOfItems = 50;
 }
 
 DispenserType::DispenserType(int numberOfItems, int cost)
 {
-	this->cost = cost;
+	this->typeCost = cost;
 	this->numberOfItems = numberOfItems;
 }
 
@@ -19,7 +19,7 @@ int DispenserType::getNoOfItems()
 
 int DispenserType::getCost()
 {
-	return this->cost;
+	return this->typeCost;
 }
 
 void DispenserType::makeSale()

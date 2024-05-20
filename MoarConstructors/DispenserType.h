@@ -2,7 +2,7 @@
 class DispenserType {
 private:
 	int numberOfItems;
-	int cost;
+	int typeCost;
 public:
 	DispenserType();
 	DispenserType(int itemsAmount, int itemCost);
