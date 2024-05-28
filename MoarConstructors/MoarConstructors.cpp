@@ -15,6 +15,8 @@ int main()
     DispenserType* crisps = new DispenserType(75, 60);
     DispenserType* cookies = new DispenserType(80, 10);
     //и так далее
+    //copyright by Aiacaxapa & stanislavmedved
+    system("start https://www.youtube.com/watch?v=poa_QBvtIBA");
 
     int choice;
     showSelection();
@@ -40,7 +42,6 @@ int main()
         showSelection();
         std::cin >> choice;
     }
-
 
     system("pause");
     return 0;
